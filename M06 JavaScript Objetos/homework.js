@@ -106,7 +106,8 @@ function agregarAmigo(objetoUsuario, nuevoAmigo) {
    // Debes agregar el "nuevoAmigo" al final de este arreglo.
    // Retornar el objeto.
    // Tu código:
-  
+   objetoUsuario.amigos.push(nuevoAmigo);
+   return objetoUsuario;
 }
 
 function pasarUsuarioAPremium(objetoMuchosUsuarios) {
@@ -147,13 +148,12 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-   agregarMetodoCalculoDescuento(producto) ; {
-      objetoProducto.calcularPrecioDescuento = function () {
+         objetoProducto.calcularPrecioDescuento = function () {
           var descuento = this.precio * this.porcentajeDeDescuento;
           return this.precio - descuento ;
         };
       return objetoProducto;
-}}
+}
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
